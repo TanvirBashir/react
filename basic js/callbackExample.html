@@ -1,0 +1,40 @@
+<script>
+// Example 1
+
+// showNumber = (callback) => {
+//   callback(console.log("a value"))
+
+// }
+
+// showNumber()
+
+
+
+
+
+// Example 2
+
+
+
+function myCalculator(num1, num2, callback) {
+  let sum = num1 + num2;
+  callback(sum);
+  console.log()
+}
+
+
+function output(output) {
+  console.log(output)
+}
+
+myCalculator(5, 5, output);
+
+
+// Example 2 : value is set before function is defined. thne the value automatically passes trough peremeter in the defined function
+
+// setTimeout(function() { myFunction("I love You !!!"); }, 3000);
+
+// function myFunction(value) {
+//   console.log(value)
+// }
+</script>
