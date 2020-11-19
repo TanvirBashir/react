@@ -2,10 +2,10 @@
 
 
 
-// Example 1: just value as peremeter
+// Example 1: 1 callback as parameter
 
 
-const func1 = () => {
+func1 = () => {
   let parentFunc = (a, b , callback) => {
 
     callback(a,b);
@@ -26,25 +26,27 @@ const func1 = () => {
 
 
 
+
 // Example 2 *********************************
  
 let func2 = () => {
+
   let parentFunc2 = (a, b , callbackA , callbackB) => {
 
     callbackA(a,b);
     callbackB(b,a);
-  
   }
 
   let callbackA = (a,b) => {
+
     let result = a - b
     console.log('callback A:', result)
-    
   }
+
   let callbackB = (a,b) => {
+
     let result = a - b
     console.log('callback B:', result)
-    
   }
 
   parentFunc2(4,3,callbackA, callbackB)

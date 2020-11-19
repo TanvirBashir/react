@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Fcomponent(props) {
+function Fcomponent({title}) {
   return(
     <React.Fragment>
-      <b>Topic: {props.title}</b> <br></br>This is a functional Component. 
+      <b>Topic: {title}</b> <br></br>This is a functional Component. 
     </React.Fragment>
   ) ;
 }
