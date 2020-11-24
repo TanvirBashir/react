@@ -28,7 +28,7 @@ class CMethodasProps extends Component {
 const ChildComponent = (props) => {
   return (
     <div>
-      <button onClick={() => props.greetHandler('CHILD')}>Greet Parent Component</button>
+      <button className="btn btn-primary" onClick={() => props.greetHandler('CHILD')}>Greet Parent Component</button>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FEventListner(props) {
+function FEventListner({title}) {
   function handleClick(e) {
     e.preventDefault();
     alert('The link was clicked.');
@@ -8,8 +8,8 @@ function FEventListner(props) {
 
   return (
     <React.Fragment>
-      <b>Topic: {props.title}</b> <br></br>
-      <button onClick={handleClick}>Click me</button>
+      <b>{title}</b> <br></br>
+      <button className="btn btn-primary" onClick={handleClick}>Click me</button>
     </React.Fragment>
     
   );

@@ -21,7 +21,7 @@ class CEventListner extends Component {
     return (
       <React.Fragment> 
         <b>Topic: {this.props.title}</b> <br/>
-        <button onClick={this.handleClick}> {this.state.message}</button>
+        <button className="btn btn-primary" onClick={this.handleClick}> {this.state.message}</button>
       </React.Fragment>
     );
   }

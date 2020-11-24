@@ -27,14 +27,14 @@ class CConditional extends Component {
       return (
         <React.Fragment>
           <div>Welcome Tanvir</div>
-          <button onClick={this.makeLogout}>{this.state.buttonText}</button>
+          <button className="btn btn-primary" onClick={this.makeLogout}>{this.state.buttonText}</button>
         </React.Fragment>
       )
     } else {
       return (
         <React.Fragment>
           <div>Please Login</div>
-          <button onClick={this.makeLogin}>{this.state.buttonText}</button>
+          <button className="btn btn-primary" onClick={this.makeLogin}>{this.state.buttonText}</button>
         </React.Fragment>
       )
     }
