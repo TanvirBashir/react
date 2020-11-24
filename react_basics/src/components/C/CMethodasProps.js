@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 // PARENT component*****************
 
 class CMethodasProps extends Component {
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
 
-    // this.greetParent = this.greetParent.bind(this)
-  }
+  //   // this.greetParent = this.greetParent.bind(this)
+  // }
 
   greetParent = (valueFromChildComp) => {
 
