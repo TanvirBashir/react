@@ -1,9 +1,10 @@
 import React from 'react'
-import FUseStateObject from './FHooks/HuseState/FuseStateObject'
-import FUseStateArray from './FHooks/HuseState/FuseStateArray'
-import FuseEffect from './FHooks/HuseEffect/FuseEffect'
-import FuseEffectConditional from './FHooks/HuseEffect/FuseEffectConditional'
-import FuseEffectOnce from './FHooks/HuseEffect/FuseEffectOnce'
+import FUseStateObject from './FHooks/FuseState/FuseStateObject'
+import FUseStateArray from './FHooks/FuseState/FuseStateArray'
+import FuseEffect from './FHooks/FuseEffect/FuseEffect'
+import FuseEffectConditional from './FHooks/FuseEffect/FuseEffectConditional'
+import FuseEffectOnce from './FHooks/FuseEffect/FuseEffectOnce'
+import FUseEffectUnmount from './FHooks/FuseEffect/FUseEffectUnmount'
 function FHooks() {
   return(
     <React.Fragment>
@@ -11,7 +12,8 @@ function FHooks() {
       <FUseStateArray title="Hook: useState with Array"/> <br/>
       <FuseEffect title="Hook: useEffect after Render"/> <br/><br/>
       <FuseEffectConditional title="Hook: useEffect Conditional"/> <br/><br/>
-      <FuseEffectOnce title="Hook: useEffect Once"/> <br/>
+      <FuseEffectOnce title="Hook: useEffect Once"/> <br/><br/>
+      <FUseEffectUnmount title="Hook: useEffect Unmount"/> <br/><br/>
 
     </React.Fragment>
   ) 

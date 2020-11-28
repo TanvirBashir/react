@@ -5,7 +5,7 @@ function FHuseEffectOnce({title}) {
 	const [y, setY] = useState(0)
 
 	const logMousePosition = e => {
-		console.log(`event logged`)
+
 		setX(e.clientX)
 		setY(e.clientY)
 
@@ -13,9 +13,9 @@ function FHuseEffectOnce({title}) {
 	useEffect(() => {
 		console.log('Mounted/rendered')
 		window.addEventListener('mousemove', logMousePosition)
-		return () => {
-			console.log(`Unmounted/cleaned up`)
-		window.addEventListener('mousemove', logMousePosition)
+			return () =>{
+			console.log('cleaned up')
+			window.removeEventListener('mousemove', logMousePosition)
 		}
 	}, [])
 
@@ -24,10 +24,10 @@ function FHuseEffectOnce({title}) {
 		<React.Fragment>
       		<h6>{title}</h6>
 			<button className="btn btn-primary mr-1" onClick={()=> {setX(0); setY(0)}}>X : {x} - Y : {y}</button>
-	
 		</React.Fragment>
 	)
 }
+
 
 
 export default FHuseEffectOnce
