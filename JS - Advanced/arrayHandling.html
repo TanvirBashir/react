@@ -17,7 +17,7 @@
           id: 4,
           name: 'Diana',
           age: 28,
-          skill: 'Vue'
+          skill: 'Vue',
         },
         {
           id: 3,
@@ -67,10 +67,27 @@
       
       // object filtering
       const filterSkill = persons
-                          .filter(person => (person.skill === 'Vue' || person.skill ==='React'))
-                          .map(person => console.log(`Someone knows  ${person.skill}` ))
+      .filter(person => (person.skill === 'Vue' || person.skill ==='React'))
+      .map(person => console.log(`Someone knows  ${person.skill}` ))
 
 
-                      
+// sort method
+
+      // number array
+      const sortNumbers = numbers
+      .sort((a,b) => a > b ? -1:1)
+      .filter(n => n > 2)
+      .map(number => console.log('number',number))
+
+      // sort person by age
+      const sortedByAge = persons
+      .sort((a, b) => (a.age > b.age ? -1 : 1))
+      .map(person => console.log('person',person.age))
+      
+      // sort person by name alphabet
+      const sortedByName = persons.sort()
+      .map(person => console.log('person',person.name))
+
+      
 
 </script>
