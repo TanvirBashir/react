@@ -1,0 +1,26 @@
+<form class="reduce-form">
+  <fieldset>
+    <input type="text" name="firstname" placeholder="Enter first name" /><br/>
+    <input type="text" name="lastname" placeholder="Enter last name"><br/>
+    <input type="email" name="email" placeholder="Enter e-mail" /><br/>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+
+<script>
+    // 1. listen to the submit event of our form
+document.querySelector('.reduce-form').addEventListener('submit', (event) => {
+  event.preventDefault()
+  //2. create an array of all elements with a [name] attribute
+  const elementArr = [...event.currentTarget.querySelectorAll('*[name]')];
+
+  //3. Reduce! Where the magic happens
+  const formData = elementArr.reduce((prev, next) => {
+    console.log('prev', prev);
+    console.log('next', next);
+    return prev;
+  }, {});
+});
+
+</script>
