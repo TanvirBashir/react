@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const FuseState = ({title}) => {
+const FuseState = ({ title }) => {
   //formula
   // useState with arrays
-  const [arr , setArr] = useState([])
+  const [arr, setArr] = useState([]);
   const arrSetting = () => {
-    if (arr.length >= 10){
-      console.log(arr.length)
-      return
+    if (arr.length >= 10) {
+      console.log(arr.length);
+      return;
     }
     setArr([
-      ...arr, 
+      ...arr,
       {
-        id : arr.length,
-    }])
-  }
+        id: arr.length,
+      },
+    ]);
+  };
   return (
     <React.Fragment>
       <h6>{title}</h6>
-      <button className="btn btn-secondary mr-1" onClick={arrSetting}> Array : Push</button>
+      <button className="btn btn-secondary mr-1" onClick={arrSetting}>
+        {" "}
+        Array : Push
+      </button>
       <div className="d-flex">
-        {arr.map(item => (<div className="" key={item.id}>{item.id}</div>))}
+        {arr.map((item) => (
+          <div className="" key={item.id}>
+            {item.id}
+          </div>
+        ))}
       </div>
     </React.Fragment>
   );
-}
-export default FuseState
+};
+export default FuseState;

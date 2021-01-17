@@ -1,42 +1,46 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class CConditional extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       isLoggedIn: true,
-      buttonText:'Logout'
-    }
+      buttonText: "Logout",
+    };
   }
   makeLogout = () => {
     this.setState({
       isLoggedIn: false,
-      buttonText:'Login'
-    })
-  }
-  makeLogin = () =>{
+      buttonText: "Login",
+    });
+  };
+  makeLogin = () => {
     this.setState({
       isLoggedIn: true,
-      buttonText:'Logout'
-    })
-  }
+      buttonText: "Logout",
+    });
+  };
   // #if-else approach
   render() {
     if (this.state.isLoggedIn) {
       return (
         <React.Fragment>
           <div>Welcome Tanvir</div>
-          <button className="btn btn-primary" onClick={this.makeLogout}>{this.state.buttonText}</button>
+          <button className="btn btn-primary" onClick={this.makeLogout}>
+            {this.state.buttonText}
+          </button>
         </React.Fragment>
-      )
+      );
     } else {
       return (
         <React.Fragment>
           <div>Please Login</div>
-          <button className="btn btn-primary" onClick={this.makeLogin}>{this.state.buttonText}</button>
+          <button className="btn btn-primary" onClick={this.makeLogin}>
+            {this.state.buttonText}
+          </button>
         </React.Fragment>
-      )
+      );
     }
   }
 
@@ -62,9 +66,9 @@ class CConditional extends Component {
 
   // #short-circuit-operator-approach
   // render() {
-  //     return this.state.isLoggedIn ? (   
+  //     return this.state.isLoggedIn ? (
   //       <div>Welcome Vishwas</div>
-      
+
   //     ) : (
   //       <div>Welcome Guest</div>
   //     )
@@ -76,4 +80,4 @@ class CConditional extends Component {
   // }
 }
 
-export default CConditional
+export default CConditional;

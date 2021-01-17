@@ -66,3 +66,4 @@ const arrToObj = theArray.reduce(
 );
 
 console.log(arrToObj);
+

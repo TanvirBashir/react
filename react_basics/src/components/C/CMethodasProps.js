@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 // PARENT component*****************
 
@@ -10,16 +10,15 @@ class CMethodasProps extends Component {
   // }
 
   greetParent = (valueFromChildComp) => {
-
-    alert(`Hello to PARENT from ${valueFromChildComp}`)
-  }
+    alert(`(::)${valueFromChildComp}(::) from ChildComponent`);
+  };
 
   render() {
     return (
       <div>
         <ChildComponent greetHandler={this.greetParent} />
       </div>
-    )
+    );
   }
 }
 
@@ -28,10 +27,14 @@ class CMethodasProps extends Component {
 const ChildComponent = (props) => {
   return (
     <div>
-      <button className="btn btn-primary" onClick={() => props.greetHandler('CHILD')}>Greet Parent Component</button>
+      <button
+        className="btn btn-primary"
+        onClick={() => props.greetHandler("Pizzas via greetParent()")}
+      >
+        Send Pizzas to Parent Component
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default CMethodasProps
-
+export default CMethodasProps;

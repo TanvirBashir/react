@@ -29,10 +29,10 @@ const persons = [
 // forEach() method
 // doesnt return a new array, and outputs array items one at a time
 const numFive = numbers.forEach((number) => console.log(number * 5));
-console.log(numFive);
+// console.log(numFive);
 // can be manipulated using callback fucntions
 const allPerson = persons.forEach((person) =>
-  console.log(`name:${person.name}`)
+  console.log(`Name:${person.name}`)
 );
 
 // map() method -------------------------------------------
