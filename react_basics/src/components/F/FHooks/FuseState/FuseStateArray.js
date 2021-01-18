@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
 const FuseState = ({ title }) => {
-  //formula
   // useState with arrays
   const [arr, setArr] = useState([]);
   const arrSetting = () => {
-    if (arr.length >= 10) {
-      console.log(arr.length);
-      return;
-    }
+    // if (arr.length >= 10) {
+    //   console.log(arr.length);
+    //   return;
+    // }
     setArr([
       ...arr,
       {

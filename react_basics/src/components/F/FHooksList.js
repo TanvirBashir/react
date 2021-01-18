@@ -2,6 +2,7 @@ import React from "react";
 import FuseStateCounter from "./FHooks/FuseState/FuseStateCounter";
 import FUseStateObject from "./FHooks/FuseState/FuseStateObject";
 import FUseStateArray from "./FHooks/FuseState/FuseStateArray";
+import ListOfThings from "./FHooks/FuseState/ListOfThings";
 import FuseEffect from "./FHooks/FuseEffect/FuseEffect";
 import FuseEffectConditional from "./FHooks/FuseEffect/FuseEffectConditional";
 import FuseEffectOnce from "./FHooks/FuseEffect/FuseEffectOnce";
@@ -14,6 +15,7 @@ function FHooks() {
       <FUseStateObject title="Hook: useState with object" /> <br />
       <br />
       <FUseStateArray title="Hook: useState with Array" /> <br />
+      <ListOfThings title="Hook: useState List" /> <br />
       <FuseEffect title="Hook: useEffect after Render" /> <br />
       <br />
       <FuseEffectConditional title="Hook: useEffect Conditional" /> <br />

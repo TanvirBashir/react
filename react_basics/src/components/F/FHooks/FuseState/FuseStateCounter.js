@@ -12,15 +12,13 @@ const FuseState = ({ title }) => {
         className="btn btn-primary mr-1"
         onClick={() => setCountA(countA + 1)}
       >
-        {" "}
         A : {countA}
       </button>
       <button
         className="btn btn-warning mr-1"
         onClick={() => setCountB(countB + 1)}
       >
-        {" "}
-        B : {countB}
+        B : {countB}{" "}
       </button>
     </React.Fragment>
   );
