@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<button onclick="goDown()">down</button>
+<button onclick="goUp()">up</button>
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+    var element = document.getElementById("animate").style;
+    var limit = 0;
+    var pos = 0;
+    var int = setInterval(goDown, 1);
+
+    function goDown() { 
+     
+      limit++
+    
+      console.log(limit)
+
+
+      if (limit == 700){
+        clearInterval(int)
+      } 
+      if (limit <= 350){
+                                                                                                          
+        pos++;
+        element.top = pos + "px";
+      
+      }else if (limit >= 350) {
+        
+        pos++;
+        element.left = pos + "px";
+    
+        
+      } 
+    }
+
+
+</script>
+
+</body>
+</html>
