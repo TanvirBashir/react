@@ -13,7 +13,7 @@ let initialValue, theArray;
 
 theArray = [1, 3, 5];
 initialValue = 0;
-const totalNumber = theArray.reduce(
+const totalNumber = [...theArray,6].reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   initialValue
 );
@@ -66,4 +66,3 @@ const arrToObj = theArray.reduce(
 );
 
 console.log(arrToObj);
-

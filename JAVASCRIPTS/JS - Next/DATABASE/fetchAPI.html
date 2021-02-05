@@ -1,0 +1,53 @@
+<style>
+  #dogImage {
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+
+<body>
+  <h1>Find your dog</h1>
+  <div id="breed">
+    <!-- <select name="" id="">
+      <option value="">BullDog</option>
+      <option value="">BullDog</option>
+      <option value="">BullDog</option>
+    </select> -->
+  </div>
+  <h3 id="breedName">Dog name</h3>
+  <div id="dogImage"></div>
+</body>
+
+<script>
+  listBreeds();
+  async function listBreeds() {
+    const response = await fetch("https://dog.ceo/api/breeds/list/all");
+    const data = await response.json();
+    console.log("listBreeds", data.message); // console
+    createBreedlist(data.message);
+  }
+
+  async function createBreedlist(breedList) {
+    let breedElement = document.getElementById("breed");
+    breedElement.innerHTML = `
+    <select onchange="loadDogs(this.value)">
+      <option>Choose a dog breed</option>
+      ${Object.keys(breedList).map((breed) => `<option>${breed}</option>`)}
+    </select>
+    `;
+  }
+
+  async function loadDogs(breedName) {
+    const response = await fetch(
+      `https://dog.ceo/api/breed/${breedName}/images`
+    );
+    const data = await response.json();
+    console.log("loadDogs", data.message); // console
+    document.getElementById("breedName").innerHTML = breedName.toUpperCase();
+    document.getElementById(
+      "dogImage"
+    ).style.backgroundImage = `url(${data.message[0]})`;
+  }
+</script>

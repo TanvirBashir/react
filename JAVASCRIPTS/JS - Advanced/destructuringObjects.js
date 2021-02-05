@@ -13,11 +13,11 @@ var user = {
 
 var {
   id,
-  details: { plane: wings },
+  details: { plane },
 } = user;
 
 console.log(id); // 42
-console.log(wings); // Paladin
+console.log(plane); // Paladin
 console.log("*************"); // break
 
 // Assignment
@@ -55,8 +55,8 @@ var user = {
 function userId({ id }) {
   return id;
 }
-function userLname({ fullName: { lastName: name } }) {
-  return name;
+function userLname({ fullName: { lastName } }) {
+  return lastName;
 }
 
 function whois({ displayName, fullName: { firstName: name } }) {

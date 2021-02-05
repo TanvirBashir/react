@@ -25,6 +25,7 @@ console.log(b);
 // assigning variable to group of variable
 
 let array = ["apple", "mango", "banana", "Orange", "Jackfruit"];
+
 [a, b, ...rest] = array;
 
 console.log(a);
@@ -36,9 +37,12 @@ var a = 1;
 var b = 3;
 
 [a, b] = [b, a];
+
 console.log(a); 
 console.log(b); 
 
 const arr = [1, 2, 3];
+
 [arr[2], arr[1]] = [arr[1], arr[2]];
+
 console.log(arr); // [1,3,2]
